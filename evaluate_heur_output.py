@@ -20,7 +20,9 @@ for line in fi:
         parts = line.strip().split(",")
         guess_dict[parts[0]] = format_label(parts[1])
 
-fi = open("heuristics_evaluation_set.txt", "r")
+# TODO: make evaluation file default but searchable.
+fi = open(sys.argv[2], "r")
+# fi = open("heuristics_evaluation_set.txt", "r")
 
 correct_dict = {}
 first = True
